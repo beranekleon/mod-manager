@@ -15,6 +15,17 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <StackPanel Spacing="10" Margin="20">
+        <Button Content="Select Image" 
+                Command="{Binding OpenFileCommand}" 
+                HorizontalAlignment="Center"/>
+        
+        <Separator/>
+        
+        <Image Source="{Binding SelectedImage}" 
+               MaxHeight="400" 
+               Stretch="Uniform"/>
+    </StackPanel>
 
+    
 </Window>
